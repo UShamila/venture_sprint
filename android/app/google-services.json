@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "787358852082",
+    "project_id": "venturesprint-df086",
+    "storage_bucket": "venturesprint-df086.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787358852082:android:e3cd6abc245d902329816b",
+        "android_client_info": {
+          "package_name": "com.example.venture_sprint"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnMDUZdMsFsc0_yDOYMj1tt8i4bLZdl90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
