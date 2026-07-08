@@ -1,21 +1,70 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+
+import 'firebase_options.dart';
+
+import 'providers/auth_provider.dart';
+import 'core/theme/app_theme.dart';
+import 'core/routes/app_routes.dart';
+
+
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
+
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+
+
+  runApp(
+    const VentureSprint(),
+  );
 }
 
-class MyApp extends StatelessWidget {
+
+
+class VentureSprint extends StatelessWidget {
+
+  const VentureSprint({super.key});
+
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(child: Text("Firebase Connected")),
+
+
+    return MultiProvider(
+
+      providers: [
+
+        ChangeNotifierProvider(
+          create: (_) => AuthProvider(),
+        ),
+
+      ],
+
+
+      child: MaterialApp(
+
+        debugShowCheckedModeBanner: false,
+
+
+        title: "VentureSprint",
+
+
+        theme: AppTheme.lightTheme,
+
+
+        initialRoute: "/",
+
+
+        routes: AppRoutes.routes,
+
       ),
+
     );
   }
 }
