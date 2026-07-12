@@ -159,7 +159,7 @@ The application uses Firebase for:
 ### 1. Clone the Repository
 
 ```bash
-git clone 
+git clone https://github.com/UShamila/venture_sprint.git
 ```
 
 ### 2. Open the Project
